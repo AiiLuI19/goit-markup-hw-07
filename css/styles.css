@@ -103,7 +103,7 @@ img {
 
   border-bottom: 1px solid #ececec;
 }
-
+/*-------- LOGO-------- */
 .logo {
   display: flex;
   padding: 24px 0;
@@ -116,12 +116,12 @@ img {
   font-size: 26px;
   line-height: 1.2;
 }
-.logo span {
+.logo__accent {
   color: var(--accent-color);
 }
 
 /*-------------------header navigation -------------------------- */
-.main-nav {
+.header__wrap {
   display: flex;
   align-items: center;
 }
@@ -129,18 +129,16 @@ img {
   display: flex;
 }
 
-.site-nav {
+.nav__list {
   display: flex;
   align-items: center;
 }
-/* .site-nav-li:nth-child(-n + 2) {
-  margin-right: 50px;
-} */
-.site-nav-li:not(:last-child) {
+
+.nav__item:not(:last-child) {
   margin-right: 50px;
 }
 
-.site-nav .link {
+.nav__list .link {
   display: flex;
   position: relative;
   padding: 32px 0;
@@ -149,18 +147,18 @@ img {
   letter-spacing: 0.02em;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.site-nav .link:hover,
-.site-nav .link:focus {
+.nav__list .link:hover,
+.nav__list .link:focus {
   color: var(--accent-color);
 }
 
-.site-nav .link.current {
+.nav__list .link.current {
   color: var(--accent-color);
 }
-.site-nav-li {
+.nav__item {
   display: flex;
 }
-.link.current::after {
+.nav__current::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -169,36 +167,31 @@ img {
   background: #2196f3;
   border-radius: 2px;
 }
-.link.current.portfolio::after {
+.nav__curret--portfolio::after {
   content: "";
-  position: absolute;
-  bottom: 0;
   width: 78px;
-  height: 4px;
-  background: #2196f3;
-  border-radius: 2px;
 }
 
-.outh-nav {
+.contact__list {
   display: flex;
   align-items: center;
 }
 
-.outh-contact {
+.contact {
   margin-left: auto;
 }
 
-.outh-nav-li {
+.contact__item {
   display: flex;
   padding-right: 10px;
   align-items: center;
 }
 
-.outh-nav-li:not(:last-child) {
+.contact__item:not(:last-child) {
   margin-right: 50px;
 }
 
-.outh-nav .link {
+.contact__list .link {
   display: flex;
   padding: 32px 0;
 
@@ -207,12 +200,12 @@ img {
   letter-spacing: 0.02em;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.outh-nav .link:hover,
-.outh-nav .link:focus {
+.contact__list .link:hover,
+.contact__list .link:focus {
   color: var(--accent-color);
 }
 
-.out-nav-icon {
+.contact__icon {
   fill: currentColor;
   margin-right: 10px;
 }
@@ -220,7 +213,11 @@ img {
 /* -------------------------PORTFOLIO -----------------------*/
 
 /* -----------------------Button nav-------------------------*/
-.section-nav .button {
+.portfolio {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.portfolio__button {
   display: inline-block;
   padding: 6px 22px;
 
@@ -241,32 +238,33 @@ img {
   background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
   box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.section-nav {
+.portfolio__button--current {
+  color: var(--title-background-color);
+  background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+.portfolio__nav {
   display: flex;
   margin-bottom: 50px;
   justify-content: center;
 }
 
-.section-nav .button:hover,
-.section-nav .button:focus {
+.portfolio__button:hover,
+.portfolio__button:focus {
   color: var(--title-background-color);
   background-color: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
-.section-nav .button.current {
-  color: var(--title-background-color);
-  background-color: var(--accent-color);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-}
-.portfolio-button:not(:last-child) {
+
+.portfolio__item:not(:last-child) {
   margin-right: 8px;
 }
 
 /* -----------WORK Portfolio---------------- */
 
-.work-exemple {
+.work {
   display: flex;
   flex-wrap: wrap;
   margin-right: -30px;
@@ -327,7 +325,7 @@ img {
   border-top: none;
   
 }
-.work-exemple .type {
+.work .type {
   margin-bottom: 4px;
 
   color: var(--primary-tex-color);
@@ -379,10 +377,7 @@ img {
 /* ---------------------HERO BUTTON ------------------- */
 
 /* -----------------------ОСОБЕННОСТИ------------------- */
-.section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
+
 .features {
   display: flex;
   margin-right: -30px;
