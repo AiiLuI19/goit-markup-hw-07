@@ -453,6 +453,15 @@ img {
   padding: 25px 100px;
 }
 
+.features__title {
+  margin-bottom: 10px;
+  color: var(--primary-tex-color);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
 /* .features__item::before {
   display: block;
   content: "";
@@ -476,15 +485,6 @@ img {
 .features__item:nth-child(4)::before {
   background-image: url(../images/cosmo.svg);
 } */
-.features__title {
-  margin-bottom: 10px;
-  color: var(--primary-tex-color);
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  text-transform: uppercase;
-}
-
 .classes {
   padding-bottom: 94px;
 }
@@ -526,6 +526,7 @@ img {
 }
 
 .team {
+  padding-top: 94px;
   font-size: 36px;
   background-color: var(--botton-background-color);
   line-height: 1.17;
@@ -534,7 +535,6 @@ img {
 }
 
 .section-title--team {
-  padding-top: 94px;
   margin-bottom: 50px;
 }
 
@@ -573,8 +573,11 @@ img {
   margin-bottom: 16px;
 }
 
-.section-title--customers {
+.customers {
   padding-top: 94px;
+}
+
+.section-title--customers {
   margin-bottom: 50px;
 }
 
